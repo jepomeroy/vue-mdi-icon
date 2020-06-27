@@ -1,6 +1,6 @@
 {
     "name": "vue-mdi-icon",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Provides Icon component for Vue that uses the https://materialdesignicons.com/ icons through @mdi/js",
     "author": "Earl Pomeroy <earl.pomeroy42@gmail.com>",
     "license": "BSD-3-Clause",

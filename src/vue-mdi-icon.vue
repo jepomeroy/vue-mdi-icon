@@ -1,12 +1,12 @@
 <template>
-    <svg :width="`${iconSize()}`" :height="`${iconSize()}`" viewBox="0 0 24 24">
+    <svg :width="`${iconSize()}`" :height="`${iconSize()}`" viewBox="0 0 24 24" :fill="color">
         <template v-if="title">
             <title>{{ title }}</title>
         </template>
         <template v-if="description">
             <description>{{ description }}</description>
         </template>
-        <g :fill="color" :transform="rotation">
+        <g :transform="rotation">
             <path :d="path" />
         </g>
     </svg>
@@ -53,7 +53,6 @@ export default {
         },
         color: {
             type: String,
-            default: '#fff',
         },
         spin: {
             type: Boolean || String,

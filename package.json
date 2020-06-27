@@ -4,6 +4,19 @@
     "description": "Provides Icon component for Vue that uses the https://materialdesignicons.com/ icons through @mdi/js",
     "author": "Earl Pomeroy <earl.pomeroy42@gmail.com>",
     "license": "BSD-3-Clause",
+    "licenses": [
+        {
+            "name": "BSD-3-Clause",
+            "url": "https://opensource.org/licenses/BSD-3-Clause"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url":  "https://github.com/EarlPomeroy/vue-mdi-icon.git"
+    },
+    "bugs": {
+        "url": "https://github.com/EarlPomeroy/vue-mdi-icon/issues"
+    },
     "keywords": [
         "Vue",
         "mdi",

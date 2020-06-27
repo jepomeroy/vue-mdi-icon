@@ -1,15 +1,17 @@
 <template>
     <div id="app">
-        <h4 class="title">{{ `Showing ${state ? 'Home' : 'Airplane'} Icon` }}</h4>
+        <h4 class="title">
+            {{ `Showing ${state ? 'Home' : 'Airplane'} Icon` }}
+        </h4>
         <div class="icon">
             <template v-if="this.state">
                 <vue-mdi-icon
-                    :path="mdiHome"
+                    class="home"
+                    :path="mdiHomeOutline"
                     size="60"
                     rotate="-12.33"
                     title="Home"
                     description="Home Icon"
-                    color="#24a39b"
                 />
             </template>
             <template v-else>
@@ -31,7 +33,7 @@
 
 <script>
 import Vue from 'vue'
-import { mdiHome, mdiAirplane } from '@mdi/js'
+import { mdiHomeOutline, mdiAirplane } from '@mdi/js'
 import VueMdiIcon from '@/vue-mdi-icon.vue'
 
 export default Vue.extend({
@@ -41,7 +43,7 @@ export default Vue.extend({
     },
     data() {
         return {
-            mdiHome,
+            mdiHomeOutline,
             mdiAirplane,
             state: false,
         }
@@ -53,3 +55,11 @@ export default Vue.extend({
     },
 })
 </script>
+<style scoped>
+.home {
+    fill: hsl(320, 77%, 34%);
+}
+.home:hover {
+    fill: hsl(320, 77%, 44%);
+}
+</style>

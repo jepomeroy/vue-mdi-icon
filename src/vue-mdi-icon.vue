@@ -7,7 +7,7 @@
             <description>{{ description }}</description>
         </template>
         <g :fill="color" :transform="rotation">
-            <path :d="icon" />
+            <path :d="path" />
         </g>
     </svg>
 </template>
@@ -21,11 +21,6 @@ export default {
         rotation() {
             return `rotate(${this.rotate} 12 12)`
         },
-    },
-    data() {
-        return {
-            icon: this.path,
-        }
     },
     methods: {
         iconSize() {

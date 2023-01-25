@@ -5,8 +5,8 @@ import vue from 'rollup-plugin-vue'
 import alias from '@rollup/plugin-alias'
 import commonjs from '@rollup/plugin-commonjs'
 import replace from '@rollup/plugin-replace'
-import babel from 'rollup-plugin-babel'
-import { terser } from 'rollup-plugin-terser'
+import babel from '@rollup/plugin-babel'
+import terser from '@rollup/plugin-terser'
 import minimist from 'minimist'
 
 // Get browserslist config and remove ie from es build targets
@@ -32,6 +32,7 @@ const baseConfig = {
             }),
         ],
         replace: {
+            preventAssignment: true,
             'process.env.NODE_ENV': JSON.stringify('production'),
             'process.env.ES_BUILD': JSON.stringify('false'),
         },
